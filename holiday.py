@@ -14,7 +14,7 @@ city_flight = input("Please enter the city you are flying to: ")
 rental_days = int(input("Please enter how many days you will be hiring a car: "))
 
 def hotel_cost(num_nights):
-   result = int(num_nights) * 100
+   result = int(num_nights) * 100 #multiply the number of nights user is staying in a hotel by 100 to get the hotel_cost
    return result
 
 def plane_cost(city_flight):
@@ -25,11 +25,11 @@ def plane_cost(city_flight):
         result = 300
     elif city_flight == "Liverpool":
         result = 400
-    else: result = 500
+    else: result = 500 #if user does not input one of the 3 choices then automatically set plane_cost at 500
     return result
 
 def car_rental(rental_days):
-    result = int(rental_days) * 40
+    result = int(rental_days) * 40 #multiply amount of rental days by 40 to get cost of car_rental
     return result
 
 hotel_total = hotel_cost(num_nights)
@@ -38,7 +38,7 @@ car_total = car_rental(rental_days)
 
 
 def holiday_cost(hotel_cost, plane_cost, car_rental):
-    result = hotel_cost + plane_cost + car_rental
+    result = hotel_cost + plane_cost + car_rental #add all previous costs together to get total cost of holiday
     return result
 
 print(holiday_cost(hotel_total, plane_total, car_total))
