@@ -9,12 +9,12 @@ Write the ID numbers to the text file reg_form
 For each iteration add a dotted line and start a new line so once printed each student can sign their name next to their ID number
 """
 new_list = []
-amount_students = int(input("Please enter how many students are registering: "))
-for i in range(amount_students):
+amount_students = int(input("Please enter how many students are registering: ")) #request input from user
+for i in range(amount_students): #for loop to iterate over the number of students registering
     reg_form = input("Please enter the next students ID number: ")
-    new_list.append(reg_form)
+    new_list.append(reg_form) #add the inputted ID number to the list, new_list
 
-with open("reg_form.txt", 'w') as file:
+with open("reg_form.txt", 'w') as file: 
     for i in new_list:
         file.write(str(i) + str(20*".")+ "\n")
 
