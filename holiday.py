@@ -14,7 +14,7 @@ city_flight = input("Please enter the city you are flying to: ")
 rental_days = int(input("Please enter how many days you will be hiring a car: "))
 
 def hotel_cost(num_nights):
-   result = int(num_nights) * 100
+   result = int(num_nights) * 100 # multiply the number of nights stayed in a hotel by 100 to get the cost of the hotel
    return result
 
 # print(hotel_cost(num_nights))
@@ -28,14 +28,14 @@ def plane_cost(city_flight):
         result = 300
     elif city_flight == "Liverpool":
         result = 400
-    else: result = 500
+    else: result = 500 #if the user does not input the three prior choices then the cost is defaulted to 500
     return result
 
 # print(plane_cost(city_flight))
 
 
 def car_rental(rental_days):
-    result = int(rental_days) * 40
+    result = int(rental_days) * 40 #multipy the number of days the car was rented by 40 to get the cost of the car rental
     return result
 
 # print(car_rental(rental_days))
@@ -46,12 +46,12 @@ car_total = car_rental(rental_days)
 
 
 def holiday_cost(hotel_cost, plane_cost, car_rental):
-    result = hotel_cost + plane_cost + car_rental
+    result = hotel_cost + plane_cost + car_rental #the total cost of the holiday is the three previous functions added together
     return result
 
 print(holiday_cost(hotel_total, plane_total, car_total))
 
-holiday_total = holiday_cost(hotel_total, plane_total, car_total)
+holiday_total = holiday_cost(hotel_total, plane_total, car_total) #put the function into a variable
 
 print(f"""Your holiday breakday will be as follows:
       The total cost of your hotel stay will be: £{hotel_total}
